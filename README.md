@@ -31,6 +31,47 @@ Make sure you have the following installed on your machine:
 
 If you need to debug the application, you can connect to the debugger on port 5678.
 
+#### Visual Studio Code Configuration
+
+To configure debugging in Visual Studio Code, add the following configuration to your `.vscode/launch.json` file:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Remote Attach",
+      "type": "python",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 5678
+      },
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}",
+          "remoteRoot": "/app"
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Running the Debugger
+
+1. Start the Docker containers:
+
+   ```sh
+   docker compose up --build
+   ```
+
+2. Open Visual Studio Code and go to the Run and Debug view.
+
+3. Select "Python: Remote Attach" from the configuration dropdown.
+
+4. Click the green play button to start debugging.
+
 ### Stopping the application
 
 To stop the application, run:
