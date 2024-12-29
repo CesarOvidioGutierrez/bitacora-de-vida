@@ -1,0 +1,415 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="es-AR">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="motivación reflexión checklist registro bitacora">
+  <meta name="description" content="">
+  <title>INICIO</title>
+  <link rel="stylesheet" href="{% static 'inicio.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static 'index.css' %}" media="screen">
+  <script class="u-script" type="text/javascript" src="{% static 'jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{% static 'inicio.js' %}" defer=""></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="referrer" content="origin">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "BITACORA DE VIDA",
+		"logo": "images/Diseo_sin_ttulo__2_-removebg-preview.png"
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="INICIO">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body data-home-page="INICIO.html" data-home-page-title="INICIO" data-path-to-root="./" data-include-products="false"
+  class="u-body u-xl-mode" data-lang="es">
+  <header class="u-clearfix u-header u-header" id="sec-db11">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="300">
+        <img src="{% static 'images/Diseo_sin_ttulo__2_-removebg-preview.png' %}" class="u-logo-image u-logo-image-1">
+      </a>
+
+      <!--menú-->
+
+      <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" id="toggle-btn">
+          <i data-lucide="chevron-left"></i>
+        </div>
+        <ul>
+          <li><a href="#"><i data-lucide="home"></i><span>Inicio CHE</span></a></li>
+          <li><a href="#"><i data-lucide="book"></i><span>Diario Personal</span></a></li>
+          <li><a href="#"><i data-lucide="target"></i><span>Metas y hábitos</span></a></li>
+          <li><a href="#"><i data-lucide="piggy-bank"></i><span>Finanzas Personales</span></a></li>
+          <li><a href="#"><i data-lucide="heart"></i><span>Salud y bienestar</span></a></li>
+          <li><a href="#"><i data-lucide="users"></i><span>Mis contactos</span></a></li>
+          <li><a href="#"><i data-lucide="plane"></i><span>Planificación de viajes</span></a></li>
+          <li><a href="#"><i data-lucide="utensils"></i><span>Menús y Recetas</span></a></li>
+        </ul>
+        <div class="config">
+          <a href="#"><i data-lucide="settings"></i><span>Configuración</span></a>
+        </div>
+      </div>
+      <div class="content">
+        <header class="u-clearfix u-header u-header" id="sec-db11">
+          <script src="https://unpkg.com/lucide@latest"></script>
+      </div>
+  </header>
+
+
+
+  <title>Mis Importantes</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <!--mis importantes-->
+  <section class="u-align-left u-clearfix u-section-1" id="sec-db10">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h1 class="u-custom-font u-font-montserrat u-text u-text-custom-color-8 u-text-default u-text-1">MIS IMPORTANTES
+      </h1>
+      <div class="custom-expanded u-tab-links-align-justify u-tabs u-tabs-1">
+        <ul class="u-spacing-30 u-tab-list u-unstyled" role="tablist">
+          <li class="u-tab-item" role="presentation">
+            <a class="active u-active-custom-color-8 u-button-style u-tab-link u-tab-link-1" id="link-tab-081f"
+              href="#tab-081f" role="tab" aria-controls="tab-081f" aria-selected="true">HORAS DE SUEÑO</a>
+          </li>
+          <li class="u-tab-item" role="presentation">
+            <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-2" id="link-tab-4d57"
+              href="#tab-4d57" role="tab" aria-controls="tab-4d57" aria-selected="false">EJERCICIO DEL DÍA</a>
+          </li>
+          <li class="u-tab-item" role="presentation">
+            <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-3" id="link-tab-3a42"
+              href="#tab-3a42" role="tab" aria-controls="tab-3a42" aria-selected="false">GASTOS DEL DÍA</a>
+          </li>
+          <li class="u-tab-item u-tab-item-4" role="presentation">
+            <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-4" id="tab-d7e7"
+              href="#link-tab-d7e7" role="tab" aria-controls="link-tab-d7e7" aria-selected="false">COMIDAS DEL DÍA</a>
+          </li>
+          <li class="u-tab-item u-tab-item-5" role="presentation">
+            <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-5" id="tab-6219"
+              href="#link-tab-6219" role="tab" aria-controls="link-tab-6219" aria-selected="false">CHECK LIST DEL
+              DÍA</a>
+          </li>
+        </ul>
+        <div class="u-tab-content">
+          <div class="u-container-style u-tab-active u-tab-pane" id="tab-081f" role="tabpanel"
+            aria-labelledby="link-tab-081f">
+            <div class="u-container-layout u-valign-top u-container-layout-1">
+              <h4 class="u-text u-text-default u-text-2">CONTADOR HORAS DE SUEÑO</h4>
+              <div class="u-align-left u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+              <input type="number" id="sleepHours" placeholder="Horas de sueño">
+              <button id="addSleepHours">Agregar</button>
+              <canvas id="sleepChart"></canvas>
+            </div>
+          </div>
+          <div class="u-container-style u-tab-pane" id="tab-4d57" role="tabpanel" aria-labelledby="link-tab-4d57">
+            <div class="u-container-layout u-container-layout-2">
+              <h4 class="u-text u-text-default u-text-4">EJERCICIO DEL DÍA</h4>
+              <input type="text" id="exerciseName" placeholder="Nombre del ejercicio">
+              <input type="number" id="exerciseDuration" placeholder="Duración (minutos)">
+              <button id="addExercise">Agregar</button>
+              <ul id="exerciseList"></ul>
+            </div>
+          </div>
+          <div class="u-container-style u-tab-pane" id="tab-3a42" role="tabpanel" aria-labelledby="link-tab-3a42">
+            <div class="u-container-layout u-container-layout-3">
+              <h4 class="u-text u-text-default u-text-7">GASTOS DEL DÍA</h4>
+              <input type="number" id="expenseAmount" placeholder="Monto">
+              <input type="text" id="expenseCategory" placeholder="Categoría">
+              <select id="expenseType">
+                <option value="expense">Gasto</option>
+                <option value="income">Ingreso</option>
+              </select>
+              <button id="addExpense">Agregar</button>
+              <canvas id="expenseChart"></canvas>
+            </div>
+          </div>
+          <div class="u-container-style u-tab-pane" id="link-tab-d7e7" role="tabpanel" aria-labelledby="tab-d7e7">
+            <div class="u-container-layout u-container-layout-4">
+              <h4 class="u-text u-text-default u-text-8">COMIDAS DEL DÍA</h4>
+              <select id="mealType">
+                <option value="desayuno">Desayuno</option>
+                <option value="almuerzo">Almuerzo</option>
+                <option value="merienda">Merienda</option>
+                <option value="cena">Cena</option>
+              </select>
+              <input type="text" id="mealDescription" placeholder="Descripción de la comida">
+              <button id="addMeal">Agregar</button>
+              <ul id="mealList"></ul>
+            </div>
+          </div>
+          <div class="u-container-style u-tab-pane" id="link-tab-6219" role="tabpanel" aria-labelledby="tab-6219">
+            <div class="u-container-layout u-container-layout-5">
+              <h4 class="u-text u-text-default">CHECK LIST</h4>
+              <input type="text" id="checklistName" placeholder="Nombre de la lista">
+              <button id="createChecklist">Crear Lista</button>
+              <div id="checklists"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+
+
+  <!--mis emociones y notas-->
+  <div class="tracker-container">
+    <!-- Sección de Emociones -->
+    <section class="emotions-section">
+      <h1>Seguimiento de Emociones</h1>
+      <div class="emotion-input">
+        <div class="emoji-selector">
+          <button class="emoji" data-emotion="Feliz">😊 Feliz</button>
+          <button class="emoji" data-emotion="Enojado">😠 Enojado</button>
+          <button class="emoji" data-emotion="Triste">😢 Triste</button>
+          <button class="emoji" data-emotion="Cansado">😴 Cansado</button>
+          <button class="emoji" data-emotion="Brillante">🌟 Brillante</button>
+        </div>
+        <button id="addEmotion" class="action-button">Agregar Emoción</button>
+      </div>
+      <button id="showEmotionProgress" class="action-button">Ver Progreso de Emociones</button>
+      <div id="emotionProgress" class="hidden">
+        <canvas id="emotionChart"></canvas>
+      </div>
+      <!-- Agregamos un div para mostrar mensajes -->
+      <div id="messageDisplay" class="message-display"></div>
+    </section>
+
+    <!-- Sección de Notas (sin cambios) -->
+    <section class="notes-section">
+      <h2>Notas Importantes</h2>
+      <textarea id="noteInput" placeholder="Escribe tu nota aquí"></textarea>
+      <button id="saveNote">Guardar Nota</button>
+      <button id="showSavedNotes">Ver Notas Guardadas</button>
+      <div id="savedNotes" class="hidden"></div>
+    </section>
+  </div>
+
+  <!-- Importante: Chart.js debe ir antes de nuestro script -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+  <!--calendario-->
+  <section
+    class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xl u-custom-color-4 u-section-3"
+    id="sec-3679">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-btn-round u-calendar u-radius u-spacing-30 u-white u-calendar-1" data-href="#sec-607c"
+        data-calendar-token="eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.Npe3FHFPZ9ym-NejJrj8nKoYmmHcsyw_a9lqvcbJ8BEB1YQzdT2LewCB1wg1ZH4PQPT4Zcr97yW2eThJI3XHZFqkBh6LVAutH5Y7dFn6XdD9goArNFCq0adS-JyyzQcVfTgk_dTCjrRM01g0PnAQjiFLuTBeBlHxgMr4CreEUvFuZqtEcxQ1dnJfc3-tKbbLii4rDZ6PnGBKi9TNd-zmHwxRpUNwRqd5buxA7qKMoNpkm_yE81EDEAi5TZLREnsaemTWZ1TsJeoNoSY2No9Yd2Ym_HKymzW6k08Zw0QOd-ZuHjyKZ7D5E-BBgB0njQ27qjHalkX-bVvly3Nr0ThyLQ.7nMFWj8G-kgy8HZg.B5K1FnlcQemVFe1AaiijphcPw7wIxcbR1a2IcLPYqeMrIt_43oos2AYHOi5t17GwXs79onal8Rm-4_q7MqTGVlhGaqcw.bInVN-a48rPBfKYBOlaiuA">
+        <div class="u-datepicker-container" style="position: relative;">
+          <div class="datepicker"></div>
+        </div>
+        <div class="u-calendar-time-container">
+          <div class="u-calendar-time-container-inner">
+            <div class="u-calendar-timezone u-text"></div>
+            <ul class="u-calendar-time-list u-unstyled" style="height: 360px;">
+              <li
+                class="fake u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn-round u-calendar-time-slot u-grey-5 u-hidden u-hover-palette-1-base u-radius u-text-black u-calendar-time-slot-1">
+                --:--</li>
+            </ul>
+          </div>
+        </div>
+        <div class="u-calendar-no-slots-message">There are no available time slots for this date.</div>
+        <div class="u-calendar-success-message">You have successfully booked the appointment.</div>
+        <div class="u-calendar-conflict-message">Unable to book the appointment for this time slot. Please book another
+          one.</div>
+        <div class="u-calendar-error-message">An unexpected error occurred.</div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section class="u-backlink u-clearfix u-grey-80">
+
+  </section>
+  <section
+    class="u-align-center u-black u-clearfix u-container-align-center u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-12"
+    id="sec-607c">
+    <div
+      class="u-align-center u-border-1 u-border-white u-container-align-center u-container-align-left-xl u-container-style u-dialog u-radius-5 u-shape-round u-white u-dialog-1">
+      <div class="u-container-layout u-valign-top u-container-layout-1">
+        <h2 class="u-align-left u-text u-text-1">Confirmar reserva</h2>
+        <p class="u-align-left u-text u-text-palette-1-base u-text-2">9:30 - 10:00 AM, viernes 8 de noviembre de 2024
+        </p>
+        <div class="u-expanded-width u-form u-form-1">
+          <form action="https://forms.nicepagesrv.com/v2/form/process"
+            class="u-clearfix u-form-spacing-19 u-form-vertical u-inner-form" style="padding: 0px;" source="email"
+            name="form">
+            <div class="u-form-group u-form-name u-form-group-1">
+              <label for="name-3e72" class="u-form-control-hidden u-label">Name</label>
+              <input type="text" placeholder="Enter your Name" id="name-3e72" name="name"
+                class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-radius u-input-1" required="">
+            </div>
+            <div class="u-form-email u-form-group u-form-group-2">
+              <label for="email-3e72" class="u-form-control-hidden u-label">Email</label>
+              <input type="email" placeholder="Enter a valid email address" id="email-3e72" name="email"
+                class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-radius u-input-2" required="">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit u-form-group-3">
+              <a href="#"
+                class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-1-base u-radius-5 u-btn-1">Confirmar</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try
+              again. </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+            <input type="hidden" name="formServices" value="37750db9-f7f0-aef4-33f0-c66c6b083a9b">
+          </form>
+        </div>
+      </div><button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-1">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style="">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1ce9"></use>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+          xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-1ce9">
+          <path
+            d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z">
+          </path>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <style>
+    .u-dialog-section-12 .u-dialog-1 {
+      width: 683px;
+      min-height: 392px;
+      height: auto;
+      margin: 60px auto;
+    }
+
+    .u-dialog-section-12 .u-container-layout-1 {
+      padding: 40px;
+    }
+
+    .u-dialog-section-12 .u-text-1 {
+      font-size: 2.25rem;
+      width: auto;
+      margin: 0;
+    }
+
+    .u-dialog-section-12 .u-text-2 {
+      width: auto;
+      font-weight: 700;
+      margin: 20px 0 0;
+    }
+
+    .u-dialog-section-12 .u-form-1 {
+      height: 204px;
+      width: 601px;
+      margin: 32px 0 0;
+    }
+
+    .u-dialog-section-12 .u-form-group-1 {
+      width: 100%;
+    }
+
+    .u-dialog-section-12 .u-input-1 {
+      --radius: 5px;
+    }
+
+    .u-dialog-section-12 .u-form-group-2 {
+      width: 100%;
+    }
+
+    .u-dialog-section-12 .u-input-2 {
+      --radius: 5px;
+    }
+
+    .u-dialog-section-12 .u-form-group-3 {
+      width: 100%;
+    }
+
+    .u-dialog-section-12 .u-btn-1 {
+      background-image: none;
+      border-style: none;
+      padding-left: 50px;
+      padding-right: 50px;
+      font-size: 1.125rem;
+    }
+
+    .u-dialog-section-12 .u-icon-1 {
+      width: 15px;
+      height: 15px;
+      left: auto;
+      top: 16px;
+      position: absolute;
+      right: 18px;
+    }
+
+    @media (max-width: 1199px) {
+      .u-dialog-section-12 .u-dialog-1 {
+        width: 683px;
+      }
+
+      .u-dialog-section-12 .u-form-1 {
+        margin-right: initial;
+        margin-left: initial;
+        width: auto;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .u-dialog-section-12 .u-container-layout-1 {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .u-dialog-section-12 .u-dialog-1 {
+        width: 540px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .u-dialog-section-12 .u-dialog-1 {
+        width: 340px;
+      }
+
+      .u-dialog-section-12 .u-container-layout-1 {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .u-dialog-section-12 .u-text-1 {
+        font-size: 1.875rem;
+      }
+    }
+  </style>
+  <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<header class="u-clearfix u-header u-header" id="sec-db11">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <a href="#" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="300">
+      <img src="{% static 'images/Diseo_sin_ttulo__2_-removebg-preview.png' %}" class="u-logo-image u-logo-image-1">
+    </a>
+
+    <!--menú-->
+    {% include 'sidebar.html' %}
+
+    <div class="content">
+      <header class="u-clearfix u-header u-header" id="sec-db11">
+        <script src="https://unpkg.com/lucide@latest"></script>
+      </header>
+    </div>
+  </div>
+</header>
+
+<title>Mis Importantes</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!--mis importantes-->
+<section class="u-align-left u-clearfix u-section-1" id="sec-db10">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <h1 class="u-custom-font u-font-montserrat u-text u-text-custom-color-8 u-text-default u-text-1">MIS IMPORTANTES
+    </h1>
+    <div class="custom-expanded u-tab-links-align-justify u-tabs u-tabs-1">
+      <ul class="u-spacing-30 u-tab-list u-unstyled" role="tablist">
+        <li class="u-tab-item" role="presentation">
+          <a class="active u-active-custom-color-8 u-button-style u-tab-link u-tab-link-1" id="link-tab-081f"
+            href="#tab-081f" role="tab" aria-controls="tab-081f" aria-selected="true">HORAS DE SUEÑO</a>
+        </li>
+        <li class="u-tab-item" role="presentation">
+          <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-2" id="link-tab-4d57" href="#tab-4d57"
+            role="tab" aria-controls="tab-4d57" aria-selected="false">EJERCICIO DEL DÍA</a>
+        </li>
+        <li class="u-tab-item" role="presentation">
+          <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-3" id="link-tab-3a42" href="#tab-3a42"
+            role="tab" aria-controls="tab-3a42" aria-selected="false">GASTOS DEL DÍA</a>
+        </li>
+        <li class="u-tab-item u-tab-item-4" role="presentation">
+          <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-4" id="tab-d7e7" href="#link-tab-d7e7"
+            role="tab" aria-controls="link-tab-d7e7" aria-selected="false">COMIDAS DEL DÍA</a>
+        </li>
+        <li class="u-tab-item u-tab-item-5" role="presentation">
+          <a class="u-active-custom-color-8 u-button-style u-tab-link u-tab-link-5" id="tab-6219" href="#link-tab-6219"
+            role="tab" aria-controls="link-tab-6219" aria-selected="false">CHECK LIST DEL DÍA</a>
+        </li>
+      </ul>
+      <div class="u-tab-content">
+        <div class="u-container-style u-tab-active u-tab-pane" id="tab-081f" role="tabpanel"
+          aria-labelledby="link-tab-081f">
+          <div class="u-container-layout u-valign-top u-container-layout-1">
+            <h4 class="u-text u-text-default u-text-2">CONTADOR HORAS DE SUEÑO</h4>
+            <div class="u-align-left u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
+            <input type="number" id="sleepHours" placeholder="Horas de sueño">
+            <button id="addSleepHours">Agregar</button>
+            <canvas id="sleepChart"></canvas>
+          </div>
+        </div>
+        <div class="u-container-style u-tab-pane" id="tab-4d57" role="tabpanel" aria-labelledby="link-tab-4d57">
+          <div class="u-container-layout u-container-layout-2">
+            <h4 class="u-text u-text-default u-text-4">EJERCICIO DEL DÍA</h4>
+            <input type="text" id="exerciseName" placeholder="Nombre del ejercicio">
+            <input type="number" id="exerciseDuration" placeholder="Duración (minutos)">
+            <button id="addExercise">Agregar</button>
+            <ul id="exerciseList"></ul>
+          </div>
+        </div>
+        <div class="u-container-style u-tab-pane" id="tab-3a42" role="tabpanel" aria-labelledby="link-tab-3a42">
+          <div class="u-container-layout u-container-layout-3">
+            <h4 class="u-text u-text-default u-text-7">GASTOS DEL DÍA</h4>
+            <input type="number" id="expenseAmount" placeholder="Monto">
+            <input type="text" id="expenseCategory" placeholder="Categoría">
+            <select id="expenseType">
+              <option value="expense">Gasto</option>
+              <option value="income">Ingreso</option>
+            </select>
+            <button id="addExpense">Agregar</button>
+            <canvas id="expenseChart"></canvas>
+          </div>
+        </div>
+        <div class="u-container-style u-tab-pane" id="link-tab-d7e7" role="tabpanel" aria-labelledby="tab-d7e7">
+          <div class="u-container-layout u-container-layout-4">
+            <h4 class="u-text u-text-default u-text-8">COMIDAS DEL DÍA</h4>
+            <select id="mealType">
+              <option value="desayuno">Desayuno</option>
+              <option value="almuerzo">Almuerzo</option>
+              <option value="merienda">Merienda</option>
+              <option value="cena">Cena</option>
+            </select>
+            <input type="text" id="mealDescription" placeholder="Descripción de la comida">
+            <button id="addMeal">Agregar</button>
+            <ul id="mealList"></ul>
+          </div>
+        </div>
+        <div class="u-container-style u-tab-pane" id="link-tab-6219" role="tabpanel" aria-labelledby="tab-6219">
+          <div class="u-container-layout u-container-layout-5">
+            <h4 class="u-text u-text-default">CHECK LIST</h4>
+            <input type="text" id="checklistName" placeholder="Nombre de la lista">
+            <button id="createChecklist">Crear Lista</button>
+            <div id="checklists"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--mis emociones y notas-->
+<div class="tracker-container">
+  <!-- Sección de Emociones -->
+  <section class="emotions-section">
+    <h1>Seguimiento de Emociones</h1>
+    <div class="emotion-input">
+      <div class="emoji-selector">
+        <button class="emoji" data-emotion="Feliz">😊 Feliz</button>
+        <button class="emoji" data-emotion="Enojado">😠 Enojado</button>
+        <button class="emoji" data-emotion="Triste">😢 Triste</button>
+        <button class="emoji" data-emotion="Cansado">😴 Cansado</button>
+        <button class="emoji" data-emotion="Brillante">🌟 Brillante</button>
+      </div>
+      <button id="addEmotion" class="action-button">Agregar Emoción</button>
+    </div>
+    <button id="showEmotionProgress" class="action-button">Ver Progreso de Emociones</button>
+    <div id="emotionProgress" class="hidden">
+      <canvas id="emotionChart"></canvas>
+    </div>
+    <!-- Agregamos un div para mostrar mensajes -->
+    <div id="messageDisplay" class="message-display"></div>
+  </section>
+
+  <!-- Sección de Notas (sin cambios) -->
+  <section class="notes-section">
+    <h2>Notas Importantes</h2>
+    <textarea id="noteInput" placeholder="Escribe tu nota aquí"></textarea>
+    <button id="saveNote">Guardar Nota</button>
+    <button id="showSavedNotes">Ver Notas Guardadas</button>
+    <div id="savedNotes" class="hidden"></div>
+  </section>
+</div>
+
+<!-- Importante: Chart.js debe ir antes de nuestro script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!--calendario-->
+<section
+  class="u-clearfix u-container-align-center-lg u-container-align-center-md u-container-align-center-sm u-container-align-center-xl u-custom-color-4 u-section-3"
+  id="sec-3679">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"></div>
+  <div class="u-btn-round u-calendar u-radius u-spacing-30 u-white u-calendar-1" data-href="#sec-607c"
+    data-calendar-token="eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZHQ00ifQ.Npe3FHFPZ9ym-NejJrj8nKoYmmHcsyw_a9lqvcbJ8BEB1YQzdT2LewCB1wg1ZH4PQPT4Zcr97yW2eThJI3XHZFqkBh6LVAutH5Y7dFn6XdD9goArNFCq0adS-JyyzQcVfTgk_dTCjrRM01g0PnAQjiFLuTBeBlHxgMr4CreEUvFuZqtEcxQ1dnJfc3-tKbbLii4rDZ6PnGBKi9TNd-zmHwxRpUNwRqd5buxA7qKMoNpkm_yE81EDEAi5TZLREnsaemTWZ1TsJeoNoSY2No9Yd2Ym_HKymzW6k08Zw0QOd-ZuHjyKZ7D5E-BBgB0njQ27qjHalkX-bVvly3Nr0ThyLQ.7nMFWj8G-kgy8HZg.B5K1FnlcQemVFe1AaiijphcPw7wIxcbR1a2IcLPYqeMrIt_43oos2AYHOi5t17GwXs79onal8Rm-4_q7MqTGVlhGaqcw.bInVN-a48rPBfKYBOlaiuA">
+    <div class="u-datepicker-container" style="position: relative;">
+      <div class="datepicker"></div>
+    </div>
+    <div class="u-calendar-time-container">
+      <div class="u-calendar-time-container-inner">
+        <div class="u-calendar-timezone u-text"></div>
+        <ul class="u-calendar-time-list u-unstyled" style="height: 360px;">
+          <li
+            class="fake u-active-palette-1-base u-border-2 u-border-active-white u-border-hover-white u-border-white u-btn-round u-calendar-time-slot u-grey-5 u-hidden u-hover-palette-1-base u-radius u-text-black u-calendar-time-slot-1">
+            --:--</li>
+        </ul>
+      </div>
+    </div>
+    <div class="u-calendar-no-slots-message">There are no available time slots for this date.</div>
+    <div class="u-calendar-success-message">You have successfully booked the appointment.</div>
+    <div class="u-calendar-conflict-message">Unable to book the appointment for this time slot. Please book another one.
+    </div>
+    <div class="u-calendar-error-message">An unexpected error occurred.</div>
+  </div>
+  </div>
+</section>
+
+<section class="u-backlink u-clearfix u-grey-80"></section>
+
+<section
+  class="u-align-center u-black u-clearfix u-container-align-center u-container-style u-dialog-block u-opacity u-opacity-70 u-valign-middle u-dialog-section-12"
+  id="sec-607c">
+  <div
+    class="u-align-center u-border-1 u-border-white u-container-align-center u-container-align-left-xl u-container-style u-dialog u-radius-5 u-shape-round u-white u-dialog-1">
+    <div class="u-container-layout u-valign-top u-container-layout-1">
+      <h2 class="u-align-left u-text u-text-1">Confirmar reserva</h2>
+      <p class="u-align-left u-text u-text-palette-1-base u-text-2">9:30 - 10:00 AM, viernes 8 de noviembre de 2024</p>
+      <div class="u-expanded-width u-form u-form-1">
+        <form action="https://forms.nicepagesrv.com/v2/form/process"
+          class="u-clearfix u-form-spacing-19 u-form-vertical u-inner-form" style="padding: 0px;" source="email"
+          name="form">
+          <div class="u-form-group u-form-name u-form-group-1">
+            <label for="name-3e72" class="u-form-control-hidden u-label">Name</label>
+            <input type="text" placeholder="Enter your Name" id="name-3e72" name="name"
+              class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-radius u-input-1" required="">
+          </div>
+          <div class="u-form-email u-form-group u-form-group-2">
+            <label for="email-3e72" class="u-form-control-hidden u-label">Email</label>
+            <input type="email" placeholder="Enter a valid email address" id="email-3e72" name="email"
+              class="u-border-1 u-border-grey-25 u-input u-input-rectangle u-radius u-input-2" required="">
+          </div>
+          <div class="u-align-left u-form-group u-form-submit u-form-group-3"></div>
+          <a href="#"
+            class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-palette-1-base u-radius-5 u-btn-1">Confirmar</a>
+          <input type="submit" value="submit" class="u-form-control-hidden">
+      </div>
+      <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+      <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again.
+      </div>
+      <input type="hidden" value="" name="recaptchaResponse">
+      <input type="hidden" name="formServices" value="37750db9-f7f0-aef4-33f0-c66c6b083a9b">
+      </form>
+    </div>
+    <button class="u-dialog-close-button u-icon u-text-grey-50 u-icon-1">
+      <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 413.348 413.348" style="">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1ce9"></use>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+        xml:space="preserve" class="u-svg-content" viewBox="0 0 413.348 413.348" id="svg-1ce9"></svg>
+      <path
+        d="m413.348 24.354-24.354-24.354-182.32 182.32-182.32-182.32-24.354 24.354 182.32 182.32-182.32 182.32 24.354 24.354 182.32-182.32 182.32 182.32 24.354-24.354-182.32-182.32z">
+      </path>
+      </svg>
+    </button>
+  </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="{% static 'stiloFin.css' %}">
+<script src="{% static 'script.js' %}"></script>
+{% endblock %}
